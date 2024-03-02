@@ -1,0 +1,6 @@
+from .PCDMS_CXH import PCDMS_CXH 
+
+NODE_CLASS_MAPPINGS = {
+    "PCDMS_CXH": PCDMS_CXH,
+    "PCDMS_CXH": PCDMS_CXH,
+}

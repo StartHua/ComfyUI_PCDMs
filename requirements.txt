@@ -1,0 +1,6 @@
+# install diffusers & pose extractor
+diffusers==0.24.0
+controlnet-aux
+transformers
+accelerate
+

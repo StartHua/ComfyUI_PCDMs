@@ -1,0 +1,11 @@
+报错：init_detector需要手动安装下面
+
+# install DWPose which is dependent on MMDetection, MMCV and MMPose
+
+# pip install -U openmim  #python_embeded>python.exe -m pip install -U openmim 报错误：ModuleNotFoundError: No module named ‘aliyunsdkcore‘ 直接拷贝到python_embeded\Lib\site-packages下
+
+# mim install mmengine    # python_embeded>python.exe -m mim install mmengine
+# mim install "mmcv>=2.0.1" #安装太慢可以https://download.openmmlab.com/mmcv/dist/cu118/torch2.2.0/index.html 
+# 2.2.0+cu118 版本没有自己编译  https://mmcv.readthedocs.io/zh-cn/latest/get_started/build.html
+# mim install "mmdet>=3.1.0"
+# mim install "mmpose>=1.1.0"
