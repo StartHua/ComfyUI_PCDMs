@@ -68,12 +68,13 @@ class PCDMS_CXH:
                 "model_image": ("IMAGE",),
                 "pose_image": ("IMAGE",),
                 "cfg": ("INT", {"default": 2, "min": 1, "max": 40, "step": 1}),
-                "steps": ("INT", {"default":50, "min": 1, "max": 200, "step":1}),    
+                "steps": ("INT", {"default":50, "min": 1, "max": 200, "step":1}),   
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),       
             }
         }
 
-    RETURN_TYPES = ("IMAGE", "IMAGE")
-    RETURN_NAMES = ("image", "image_masked")
+    RETURN_TYPES = ("IMAGE",)
+    RETURN_NAMES = ("image", )
     FUNCTION = "generate"
 
     CATEGORY = "CXH"
@@ -87,7 +88,7 @@ class PCDMS_CXH:
         self.image_proj_model = None
         self.generator = None
 
-    def generate(self, model_image, pose_image,cfg,steps):
+    def generate(self, model_image, pose_image,cfg,steps,seed):
         if self.pipe == None:
             self.clip_image_processor = CLIPImageProcessor()
             self.img_transform = transforms.Compose([
@@ -193,6 +194,6 @@ class PCDMS_CXH:
         output_image = to_tensor(result)
         output_image = output_image.permute((1, 2, 0))
         
-        return ([output_image], [output_image])
+        return ([output_image], )
 
 
