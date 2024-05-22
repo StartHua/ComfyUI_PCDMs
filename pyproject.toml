@@ -1,0 +1,15 @@
+[project]
+name = "comfyui_pcdms"
+description = "Original project: [a/link](https://github.com/tencent-ailab/PCDMs)\nBased on testing, the author's original images work very well, but using my own images generally requires some luck!"
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["# install diffusers & pose extractor", "diffusers==0.24.0", "controlnet-aux", "transformers", "accelerate"]
+
+[project.urls]
+Repository = "https://github.com/StartHua/ComfyUI_PCDMs"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI_PCDMs"
+Icon = ""
